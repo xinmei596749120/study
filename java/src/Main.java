@@ -1,0 +1,10 @@
+import chen.net.sigar.SigarUtils;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        SigarUtils aa = new SigarUtils();
+        aa.Testethernet();
+    }
+
+}
