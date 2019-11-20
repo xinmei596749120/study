@@ -1,0 +1,115 @@
+<!--
+// All options
+// activity  ==> activity  + property + command
+// service   ==> service   + property + command
+// broadcast ==> broadcast + property + command
+// property  ==> property  + command
+// command   ==> property  + command
+
+<CombinationKeys>
+   <CombinationKey name="Example" type="activity, service, broadcast, property, command">
+      <KeyCodes desc="0000">
+         <key>7</key>
+         <key>7</key>
+         <key>7</key>
+         <key>7</key>
+      </KeyCodes>
+      <PackageName>com.android.launcher</PackageName>
+      <ActivityName>com.android.launcher2.Launcher</ActivityName>
+      <ServiceName>com.android.launcher2.Launcher</ServiceName>
+      <Action>android.intent.action.MAIN</Action>
+      <Data>http://www.baidu.com</Data>
+      <Permission></Permission>
+      <Category>
+         <name>android.intent.category.LAUNCHER</name>
+         <name>android.intent.category.DEFAULT</name>
+         <name>android.intent.category.MONKEY</name>
+      </Category>
+      <Flags>
+         <name desc="Intent.FLAG_ACTIVITY_NEW_TASK">0x10000000</name>
+      </Flags>
+      <Extra name="key1">value1</Extra>
+      <Extra name="key2">value2</Extra>
+      <Property key="persist.sys.debugenable">1</Property>
+      <Property key="persist.sys.debugenable1">3</Property>
+      <Command>
+         <cmd>setprop ctl.stop umcped</cmd>
+         <cmd>rm -rf /data/umcpe/*</cmd>
+         <cmd>reboot</cmd>
+      </Command>
+   </CombinationKey>
+
+   ......
+
+</CombinationKeys>
+-->
+
+<CombinationKeys>
+<!--
+   <CombinationKey name="OpenURL" type="activity">
+      <KeyCodes desc="8080">
+         <key>15</key><key>7</key><key>15</key><key>7</key>
+      </KeyCodes>
+      <Action>android.intent.action.VIEW</Action>
+      <Data>http://www.baidu.com</Data>
+   </CombinationKey>
+   <CombinationKey name="Settings" type="activity">
+      <KeyCodes desc="9090">
+         <key>16</key><key>7</key><key>16</key><key>7</key>
+      </KeyCodes>
+      <PackageName>com.android.settings</PackageName>
+      <ActivityName>com.android.settings.Settings</ActivityName>
+   </CombinationKey>
+   <CombinationKey name="Master Clear" type="broadcast">
+      <KeyCodes desc="90123">
+         <key>16</key><key>7</key><key>8</key><key>9</key><key>10</key>
+      </KeyCodes>
+      <Permission></Permission>
+      <Action>android.intent.action.MASTER_CLEAR</Action>
+   </CombinationKey>
+-->
+   <CombinationKey name="Enable ADB&amp;Console" type="property">
+      <KeyCodes desc="782782323 (start adbd)">
+         <key>14</key><key>15</key><key>9</key><key>14</key><key>15</key>
+         <key>9</key><key>10</key><key>9</key><key>10</key>
+      </KeyCodes>
+      <Property key="persist.sys.debugenable">1</Property>
+   </CombinationKey>
+   <CombinationKey name="Disable ADB&amp;Console" type="property">
+      <KeyCodes desc="78672323 (stop adbd)">
+         <key>14</key><key>15</key><key>13</key><key>14</key>
+         <key>9</key><key>10</key><key>9</key><key>10</key>
+      </KeyCodes>
+      <Property key="persist.sys.debugenable">0</Property>
+   </CombinationKey>
+
+   <CombinationKey name="Launch default launcher" type="activity">
+      <KeyCodes desc="F2F3F2F3 (green yellow gree yellow)">
+         <key>184</key><key>185</key><key>184</key><key>185</key>
+      </KeyCodes>
+      <PackageName>com.android.launcher</PackageName>
+      <ActivityName>com.android.launcher2.Launcher</ActivityName>
+   </CombinationKey>
+   <CombinationKey name="Launch default launcher" type="activity">
+      <KeyCodes desc="F7F8F7F8 (green yellow gree yellow)">
+         <key>137</key><key>138</key><key>137</key><key>138</key>
+      </KeyCodes>
+      <PackageName>com.android.launcher</PackageName>
+      <ActivityName>com.android.launcher2.Launcher</ActivityName>
+   </CombinationKey>
+   <CombinationKey name="reset password" type="broadcast">
+      <KeyCodes desc="90123#">
+         <key>16</key><key>7</key><key>8</key><key>9</key>
+         <key>10</key><key>18</key>
+      </KeyCodes>
+      <Action>com.settings.resetpassword.Action</Action>
+   </CombinationKey>
+   <CombinationKey name="reset business password" type="broadcast">
+      <KeyCodes desc="Up Up Down Down Left Left Right Right#">
+         <key>19</key><key>19</key><key>20</key><key>20</key>
+         <key>21</key><key>21</key><key>22</key><key>22</key>
+		 <key>18</key>
+      </KeyCodes>
+      <Action>android.intent.action.ResetUserNameAction</Action>
+   </CombinationKey>
+</CombinationKeys>
